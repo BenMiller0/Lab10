@@ -12,11 +12,19 @@
   <link rel="stylesheet" href="assets/styles/global.css" />
   <script src="assets/scripts/speechSynth.js" type="module"></script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1M7V3EGDT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-1M7V3EGDT5');
+</script>
 <body>
   <header>
     <nav>
-      <a href="index.html" title="Go to  party horn">Party Horn</a>
+      <a href="index.html" title="Go to  party horn" class="greentext">Party Horn</a>
     </nav>
   </header>
   <main>
@@ -25,11 +33,11 @@
         <h2>Speech Synthesizer</h2>
       </header>
       <img src="assets/images/smiling.png" alt="Smiling face" />
-      <textarea name="text-to-speak" id="text-to-speak" rows="10" placeholder="Text to speak here"></textarea>
+      <textarea name="text-to-speak" id="text-to-speak" rows="10" placeholder="Text to speak here (e.x.: Hello world!)"></textarea>
       <select name="voice" id="voice-select">
         <option value="select" disabled selected>Select Voice:</option>
       </select>
-      <button>Press to Talk</button>
+      <button aria-label="Press to Talk">Press to Talk</button>
     </section>
   </main>
 </body>

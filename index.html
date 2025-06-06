@@ -19,7 +19,7 @@
 <body>
   <header>
     <nav>
-      <a href="speechSynth.html" title="Go to speech synthesizer">Speech Synthesizer</a>
+      <a href="speechSynth.html" title="Go to speech synthesizer" class="greentext">Speech Synthesizer</a>
     </nav>
   </header>
   <main>
@@ -38,9 +38,21 @@
         <input type="range" name="volume" id="volume" value="50" min="0" max="100" step="1" />
         <img src="assets/icons/volume-level-2.svg" alt="Volume level 2" />
       </div>
-      <button>Play Sound</button>
+      <button aria-label="Press to talk">Play Sound</button>
       <audio class="hidden" src=""></audio>
     </section>
+      <script>
+      // Generate a random number between 0 and 1
+      const randomNumber = Math.random();
+      // Determine if the class should be applied
+      const shouldApplyClass = randomNumber < 0.5;
+      // Get the body element
+      let body = document.querySelector('body');
+      // Apply or remove the "blue" class based on the random number
+      if (shouldApplyClass) {
+          body.classList.add('blue');
+      }
+  </script>
   </main>
 </body>
 

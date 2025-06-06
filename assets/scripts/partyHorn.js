@@ -42,6 +42,7 @@ function updateVolume() {
       break;
   }
   volumeImg.setAttribute('src', `assets/icons/volume-level-${volumeLevel}.svg`);
+  volumrImg.setAttribute('alt')
   audioElem.volume = volume / 100;
 }
 
